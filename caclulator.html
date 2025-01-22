@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .calculator
+    {
+        width: fit-content;
+        padding: 20px;
+        border: 1px solid;
+        border-radius: 10px;
+        background-color: rgb(230, 198, 176);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .button_cont 
+    {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 15px;
+          width: fit-content;
+          
+    }
+    .button_cont button
+    {
+          width: 30px;
+          background-color: rgb(235, 157, 157);
+          border-radius: 10px;
+          border: 1px solid;
+    }
+    .inputbar
+    {
+        display: flex;
+        width: fit-content;
+    }
+    .inputbar input{
+        border: 1px solid;
+        width: 150px;height: 30px;
+        border-radius: 5px;
+    }
+    .inputbar button
+    {
+        height: 30px;
+        border: 1px solid;
+        border-radius: 5px;
+        background-color: rgb(255, 180, 180);
+    }
+</style>
+<body>
+    <div class="maincont">
+            <div class="calculator">
+                <div class="inputbar">
+                    <div><input class="inputbox" type="text" placeholder="Enter"></div>
+                    <div><button onclick="evaluate1()">=</button></div>    
+                </div>
+
+            <div>
+                    <div class="button_cont">
+                      <div><button onclick="print('1')">1</button></div>
+                      <div><button onclick="print('2')">2</button></div>
+                      <div><button onclick="print('3')">3</button></div>
+                      <div><button onclick="print('+')">+</button></div>
+
+                      <div><button onclick="print('4')">4</button></div>
+                      <div><button onclick="print('5')">5</button></div>
+                      <div><button onclick="print('6')">6</button></div>
+                      <div><button onclick="print('-')">-</button></div>
+
+                      <div><button onclick="print('7')">7</button></div>
+                      <div><button onclick="print('8')">8</button></div>
+                      <div><button onclick="print('9')">9</button></div>
+                      <div><button onclick="print('*')">X</button></div>
+
+                      <div><button onclick="print('0')">0</button></div>
+                      <div><button onclick="print('00')">00</button></div>
+                      <div><button onclick="print('.')">.</button></div>
+                      <div><button onclick="print('/')" >/</button></div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+<script>
+const inputbox=document.querySelector(".inputbox");
+function  print(input)
+{
+     inputbox.value+=input;
+}
+function evaluate1()
+{
+   inputbox.value=eval(inputbox.value);
+}
+
+</script>
+</html>

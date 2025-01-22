@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<style>
+    body
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .cont
+    {
+        height: 500px;width: fit-content;
+        padding: 10px;
+        background-color: rgb(221, 244, 186);
+        display: flex;
+        gap: 10px;
+        border-radius: 10px;
+    }
+    .items-cont
+    {
+        height: 475px;width: 380px;
+        border-radius: 10px;
+        background-color: white;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+
+    }
+    .total
+    {
+        height: 475px;width: 230px;
+        border-radius: 10px;
+        background-color: white;
+        padding: 10px;    
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-between;
+
+    }
+    .items
+    {
+        height: fit-content;
+        max-height: 420px;width: 230px;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+
+       
+    }
+    .buy
+    {
+        height: 50px;width: 220px;
+ 
+        padding: 5px;   
+        display: flex;
+        flex-direction: column;
+        gap: 10px;  
+
+    }
+    .buylink
+    {
+        background-color: rgb(175, 235, 175);
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        padding: 4px 0px;
+    }
+    .item2
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 5px;
+        background-color: rgb(221, 244, 186);
+        overflow: hidden;
+        border-radius: 5px;
+        padding-right: 5px;
+       
+    }
+    .i2-img img
+    {
+        width: 45px;
+    }
+    .item
+    {
+        width: 110px;height: 145px;
+        background-color: rgb(221, 244, 186);
+        border-radius: 10px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+
+    }
+    .i-img
+    {
+        overflow: hidden;
+        width: 110px;
+        border-radius: 10px;
+    }
+    .i-img img
+    {
+        width: 110px;
+    }
+    .atc
+    {
+        background-color: rgb(175, 235, 175);
+        padding: 5px 17px;
+        border-radius: 10px;
+    } 
+    .minus
+    {
+        border-radius: 100%;
+        background-color: red;color: white;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        font-size: large;
+        font-weight: bold;
+
+    }
+</style>
+<body>
+    <div class="cont">
+
+        <div class="items-cont">
+           <div class="item">
+                    <div class="i-img"><img src="img2.png"></div>
+                    <div class="i-name">Washing machine</div>    
+                    <div class="i-price">price: $12/-</div>
+                    <div class="atc">Add to cart</div>
+         </div>
+         <div class="item">
+            <div class="i-img"><img src="img2.png"></div>
+            <div class="i-name">Washing machine</div>    
+            <div class="i-price">$12/-</div>
+            <div class="atc">Add to cart</div>
+ </div>
+ <div class="item">
+    <div class="i-img"><img src="img2.png"></div>
+    <div class="i-name">Washing machine</div>    
+    <div class="i-price">$12/-</div>
+    <div class="atc">Add to cart</div>
+</div>
+<div class="item">
+    <div class="i-img"><img src="img2.png"></div>
+    <div class="i-name">Washing machine</div>    
+    <div class="i-price">$12/-</div>
+    <div class="atc">Add to cart</div>
+</div>
+<div class="item">
+    <div class="i-img"><img src="img2.png"></div>
+    <div class="i-name">Washing machine</div>    
+    <div class="i-price">$12/-</div>
+    <div class="atc">Add to cart</div>
+</div>
+<div class="item">
+    <div class="i-img"><img src="img2.png"></div>
+    <div class="i-name">Washing machine</div>    
+    <div class="i-price">$12/-</div>
+    <div class="atc">Add to cart</div>
+</div>
+<div class="item">
+    <div class="i-img"><img src="img2.png"></div>
+    <div class="i-name">Washing machine</div>    
+    <div class="i-price">$12/-</div>
+    <div class="atc">Add to cart</div>
+</div>
+<div class="item">
+    <div class="i-img"><img src="img2.png"></div>
+    <div class="i-name">Washing machine</div>    
+    <div class="i-price">$12/-</div>
+    <div class="atc">Add to cart</div>
+</div>
+<div class="item">
+    <div class="i-img"><img src="img2.png"></div>
+    <div class="i-name">Washing machine</div>    
+    <div class="i-price">$12/-</div>
+    <div class="atc" onclick="werer('we')">Add to cart</div>
+</div>
+
+        </div>
+
+        
+
+        <div class="total">
+
+            <div class="items">
+                     <div class="cart"><center><h2>Cart</h2></center></div>
+                     <div class="item2">
+                        <div style="display: flex; align-items: center;">
+                            <div class="i2-img"><img src="img2.png"></div>
+                            <div class="i2-name">Washing machine</div>    
+                        </div>
+                        <div class="i2-price">$12</div>
+                        <div class="minus">-</div>
+                     </div>
+                     
+            </div>
+            <div class="buy">
+               <div  style="display: flex; justify-content: space-between;">              
+                <div>total</div><div class="price">$</div>
+               </div>
+               <div class="buylink">Confirm Order</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+       
+</script>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffccff, #ccf2ff);
+           
+    }
+.form-container
+{
+
+   height: fit-content;
+   padding: 20px 0px;
+   width:  400px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 10px;
+   background-color: white;
+}
+.form-holder 
+{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+
+}
+.content
+{
+    display: flex;
+    justify-content: space-between;
+   
+    width: 350px;
+}
+input
+{
+    border: none;
+    border-bottom: solid 1px rgb(206, 195, 195);
+    outline: none;
+}
+button
+{
+    border: none;
+    border-radius: 10px;
+    width: 80px; height: 30px;
+    background-color: gainsboro;
+    transition: 1s;
+}
+button:hover
+{
+    background-color: rgb(182, 163, 163);
+}
+.messagebox
+{
+    border: #a8adaf solid 1.5px;
+    height: 100px; width: 350px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+
+}
+.message
+{
+    background-color: #dee5e9;
+    width: 330px; padding: 10px;
+    height: fit-content;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.error
+{
+    font-size: 10px;
+    color: red;
+}
+</style>
+<body>
+    <div class="form-container">
+     <form id="myForm">
+       <div class="form-holder">
+         <div>
+            <div class="content">
+             <div><label for="name">Name:</label></div> 
+             <div><input type="text" id="name" name="name"></div>  
+            </div>
+             <div><span id="nameError" class="error"></span></div>     
+         </div>        
+         <div>
+            <div class="content">
+             <div><label for="email">Email:</label></div>
+             <div><input type="email" id="email" name="email"></div>
+            </div>
+             <div><span id="emailError" class="error"></span></div>
+         </div>        
+         <div>
+            <div class="content">
+             <div><label for="password">Password:</label></div>
+             <div><input type="password" id="password" name="password"></div>
+            </div>
+             <div><span id="passwordError" class="error"></span></div>
+        </div>
+          <div>
+            <div class="content">
+             <div><label for="address">Address:</label></div>
+             <div><input type="text" id="address" name="address"></div>
+            </div>
+             <div><span id="addressError" class="error"></span></div>
+          </div>   
+    
+           <div>
+            <div class="content">
+             <div><label for="phone">Phone Number:</label></div>
+             <div><input type="tel" id="phone" name="phone"></div>
+            </div>
+             <div><span id="phoneError" class="error"></span></div>
+            </div>
+        <div>
+            <div class="content">
+             <div><label for="message">Message:</label></div>
+             <div><textarea id="message" name="message" rows="4"></textarea></div>
+            </div>
+             <div><span id="messageError" class="error"></span>        
+        </div>
+         <div>
+             <button >Submit</button>
+         </div>
+       </div>
+     </form>
+     <div class="messagebox">
+               <div class="message">
+                            
+                            <div style="display: flex; justify-content: space-between;">
+                                <div class="memail">we@gmail.com. 6:45 AM</div>
+                                <div class="close" style="font-weight: bolder; color: rgb(137, 137, 137);">x</div>
+                            </div> 
+                            <div class="mmessage">gohut: hi this is we Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliqgendi! Mollitia, est omnis.</div>
+                            <div class="mcotact">contact number:6456546464</div>
+               </div> 
+     </div>
+    </div> 
+     
+     <script>
+       const  namein=document.querySelector("#name");
+       const  emailin=document.querySelector("#email");
+       const  passwordin=document.querySelector("#password");
+       const  addressin=document.querySelector("#address");
+       const  phonein=document.querySelector("#phone");
+       const  messagein=document.querySelector("#message");
+       
+       const  nameE=document.querySelector(".error");
+       const  emailE=document.querySelector("#emailError");
+       const  passwordE=document.querySelector("#passwordError");
+       const  addressE=document.querySelector("#addressError");
+       const  phoneE=document.querySelector("#phoneError");
+       const  messageE=document.querySelector("#messageError");
+
+       function checkempty(errorElement) {
+
+                errorElement.textContent = "Field should not be empty";
+        }
+
+        
+        function checkrun() {
+            if ((String(namein.value).length) > 20) {
+                nameE.textContent = "Name should be less than 20 characters";
+            } else if ((String(namein.value).length) === 0) {
+                checkempty(nameE);
+            } else {
+                nameR = String(namein.value);
+                nameE.textContent = "";
+            }
+        }
+
+
+    document.querySelector("#myForm").addEventListener("submit", function(event) {event.preventDefault(); checkrun();});
+
+     </script>
+ </body></html>
